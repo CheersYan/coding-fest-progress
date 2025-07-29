@@ -7,6 +7,7 @@ import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Clock, Circle } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 /**
  * Simple progress-tracking dashboard for the “Forget Me Not” project.
@@ -81,8 +82,13 @@ export default function ImplementationProgressDashboard() {
       </section>
 
       {/* ── Call to action */}
-      <div className="text-center pt-6">
+      <div className="text-center pt-6 space-y-2">
         <Button size="lg">Update progress</Button>
+        <p>
+          <Link href="/screenshots" className="text-blue-600 underline">
+            View screenshots
+          </Link>
+        </p>
       </div>
     </motion.main>
   );
